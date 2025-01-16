@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+
 import DrumPad from "./DrumPad";
 import Display from "./Display";
 import { setDisplayText } from "../redux/slice";
-import { useDispatch } from "react-redux";
 import "../styles/App.css";
 
 const drumPads = [
@@ -68,7 +69,6 @@ const App = () => {
   const handleKeyPress = (e) => {
     const key = e.key.toUpperCase();
     const drumPad = document.getElementById(key);
-
     if (drumPad) {
       drumPad.click();
     }
@@ -76,13 +76,13 @@ const App = () => {
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyPress);
-
     return () => window.removeEventListener("keydown", handleKeyPress);
   }, []);
 
   return (
     <main
       id="drum-machine"
+      data-testid="drum-machine"
       className="container text-center h-100 d-flex flex-column justify-content-center align-content-center"
     >
       <Display />
