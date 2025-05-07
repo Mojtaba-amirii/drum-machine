@@ -9,8 +9,8 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.7.0",
-    "bootstrap": "^5.3.5",
+    "@reduxjs/toolkit": "^2.8.0",
+    "bootstrap": "^5.3.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
